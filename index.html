@@ -12,18 +12,31 @@
     <h1>NSIweb</h1>
     <h2>alban lefort</h2>
     <h1>FORMULAIRE</h1>
-        <p>
-            <form action="recolte_donnees.php" method="post">
-            <h2>boisson favoris</h2>
-        <input type="checkbox" name="boisson[]" id="">Coca <br>
-        <input type="checkbox" name="boisson[]" id="">Ice tea <br>
-        <input type="checkbox" name="boisson[]" id="">Oasis <br>
-        <input type="checkbox" name="boisson[]" id="">Fanta <br>
-        </p>
-        <p>
-            <input type="submit" value="Validé">
-        </p>
-    </form>
+    <form id="result" action="">
+        <label>Prénom :
+                <p>
+                  <select class="prénom" name="prénom">
+                    <option value="Paul" id="prenom">Paul</option>
+                    <option value="Pierre" id="prenom">Pierre</option>
+                  </select>
+                </p>  
+        </label>
+      <label>Boisson favoris :
+        <p>   
+                  <input type="checkbox" id="boisson" value="coca">Coca <br>
+                  <input type="checkbox" id="boisson" value="ice tea"> Ice tea <br>
+                  <input type="checkbox" id="boisson" value="oasis">Oasis <br>
+                  <input type="checkbox" id="boisson" value="fanta">Fanta <br>
+               </p>
+      </label>
+    <div class="result"></div>
+            </div>
+        </form>
+    <script>
+            console.log(document.getElementById(id="prénom"))
+            console.log(document.getElementById(id="boisson"))
+        </script>
+
 </body>
 
 </html>
