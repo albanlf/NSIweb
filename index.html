@@ -1,42 +1,90 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WEB SITE NSI</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>NSIweb</title>
 </head>
-
 <body>
-    <h1>NSIweb</h1>
-    <h2>alban lefort</h2>
-    <h1>FORMULAIRE</h1>
-    <form id="result" action="">
-        <label>Prénom :
-                <p>
-                  <select class="prénom" name="prénom">
-                    <option value="Paul" id="prenom">Paul</option>
-                    <option value="Pierre" id="prenom">Pierre</option>
-                  </select>
-                </p>  
-        </label>
-      <label>Boisson favoris :
-        <p>   
-                  <input type="checkbox" id="boisson" value="coca">Coca <br>
-                  <input type="checkbox" id="boisson" value="ice tea"> Ice tea <br>
-                  <input type="checkbox" id="boisson" value="oasis">Oasis <br>
-                  <input type="checkbox" id="boisson" value="fanta">Fanta <br>
-               </p>
-      </label>
-    <div class="result"></div>
-            </div>
-        </form>
-    <script>
-            console.log(document.getElementById(id="prénom"))
-            console.log(document.getElementById(id="boisson"))
-        </script>
 
+<p>Alban Lefort<br>
+
+  <h2>Formulaire</h2>
+  <h3>contenu du formulaire</h3>
+<ul>
+  <li>choix de prenom</li>
+  <li>votre nom</li>
+  <li>votre sexe</li> 
+  <li>fruit(s) préféré(s)</li>
+</ul>
+
+<form>
+  
+<h>prénom</h>
+<br>
+<SELECT id="prénom" size="1">
+    <OPTION>paul</OPTION>
+    <OPTION>ipierre</OPTION>
+</SELECT>
+<br>
+
+
+<div id="rep">
+<label for ="nom">Quel est votre nom ?<br></label>
+<input type="text" id="nom">
+</div>
+
+  <fieldset>
+    <legend>sexe:</legend>
+
+    <div>
+      <input type="radio" id="homme" name="sexe" value="homme"
+             checked>
+      <label for="homme">homme</label>
+    </div>
+
+    <div>
+      <input type="radio" id="femme" name="sexe" value="femme">
+      <label for="femme">femme</label>
+    </div>
+</fieldset>
+
+
+  <fieldset> 
+<legend>fruit:</legend>
+
+<div>
+<input type="checkbox" id="poire" name="poire"
+checked>
+<label for="poire">poire</label>
+</div>
+
+<div>
+<input type="checkbox" id="pomme" name="pomme">
+<label for="pomme">pomme</label>
+</div>
+<div>
+<input type="checkbox" id="fraise" name="fraise">
+<label for="fraise">fraise</label>
+</div>
+</fieldset>
+
+</form>
+<div id="display"> 
+<button type="button" onclick="increase()">click me!!</button>
+</div>
+  
+<script>
+    function increase()
+{
+    var prenom = document.getElementById("prenom").value;
+    document.getElementById('display').innerHTML=prenom;
+}
+  {
+    var boisson = document.getElementById("boisson").value;
+    document.getElementById('display').innerHTML=boisson;
+}
+</script>
+    
 </body>
-
 </html>
